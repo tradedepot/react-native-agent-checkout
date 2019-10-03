@@ -31,23 +31,89 @@
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      compile project(':react-native-agent-checkout')
+      implementation project(':react-native-agent-checkout')
   	```
 
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
+4. Config for Android (intercom-android)
+   i. In `android/app/src/main/java/com/YOUR_APP/app/MainApplication.java`, add the following code in the respective sections of the file using your Intercom Android API Key and ShopAgent Api Key
+   ```
+	// ...other configuration here...
 
-1. In Visual Studio add the `RNAgentCheckout.sln` in `node_modules/react-native-agent-checkout/windows/RNAgentCheckout.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Agent.Checkout.RNAgentCheckout;` to the usings at the top of the file
-  - Add `new RNAgentCheckoutPackage()` to the `List<IReactPackage>` returned by the `Packages` method
+	import co.tradedepot.shop.sdk.checkout.Checkout;
+	import io.intercom.android.sdk.Intercom;
 
+	public class MainApplication extends Application {
 
-## Usage
-```javascript
-import RNAgentCheckout from 'react-native-agent-checkout';
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		 Checkout.initialize(this, "API_KEY");
 
-// TODO: What to do with the module?
-RNAgentCheckout;
+		// ...other configuration here...
+
+	}
+
+	public List<ReactPackage> getPackages() {
+		return Arrays.<ReactPackage>asList(
+
+		// ...other configuration here...
+
+		
+
+		// ...other configuration here...
+
+		);
+	}
+	}
 ```
-  
+	ii. In `android/build.gradle add   maven { url  "https://dl.bintray.com/tradedepot/agent-checkout-sdk-android" }`
+		```
+			allprojects {
+				repositories {
+
+					//...other configuration here...
+
+					maven { url  "https://dl.bintray.com/tradedepot/agent-checkout-sdk-android" }
+				}
+			}
+		```
+	iii. Open android manifest set the allowbackup to true
+		```
+			<application
+			// ...other configuration here...
+			android:allowBackup="true" ---> here
+			>
+	  ```
+
+
+
+## Usage 
+Import the Module
+```javascript
+import shopAgent from 'react-native-agent-checkout';
+```
+
+  Register a shoptopUp Agent 
+
+  ```
+	shopAgent.updateUser({
+		// Pre-defined user attributes
+		agentId: 'fhj50tgoonoo',
+		firstName: 'chisom',
+		lastName: 'onwuegbuzie',
+		phoneNumber: '+2348066379681',
+		countryCode: 'NG',
+		company: 'Goldtek Ventures',
+		latitude: 3.134555,
+		longitude: 3.058585,
+		address: '259 etim inyang crescent'
+	});
+```
+Open Cart
+```
+	shopAgent.openCart();
+```
+Open Transaction
+```
+	shopAgent.openTransaction();
+```

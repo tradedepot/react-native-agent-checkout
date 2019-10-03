@@ -1,5 +1,13 @@
 
   /**
+   * openTransactions
+   * @returns {Promise<void>}
+   */
+  export function openTransactions(): Promise<void>;
+
+
+
+  /**
    * openCart
    * @returns {Promise<void>}
    */

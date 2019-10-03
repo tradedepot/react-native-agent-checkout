@@ -1,0 +1,5 @@
+<root>
+    <item name='com.tradedepot.react.shopagent.shop.sdk.checkout.Registration'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

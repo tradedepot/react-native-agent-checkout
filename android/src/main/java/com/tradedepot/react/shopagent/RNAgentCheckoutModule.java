@@ -14,6 +14,7 @@ import com.facebook.react.bridge.Callback;
 import co.tradedepot.shop.sdk.checkout.Checkout;
 import co.tradedepot.shop.sdk.checkout.Registration;
 
+
 public class RNAgentCheckoutModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
@@ -61,6 +62,17 @@ public class RNAgentCheckoutModule extends ReactContextBaseJavaModule {
       Log.e(TAG, "shoptopupAgent not initialized");
     }
    
+  }
+
+
+  @ReactMethod
+  public void openTransactions(){
+    try{
+      Checkout.openTransactions();
+    } catch (Exception e) {
+      Log.e(TAG, "shoptopupAgent not initialized");
+    }
+    
   }
 
 }

@@ -83,24 +83,24 @@ import shopAgent from 'react-native-agent-checkout';
   Register a shoptopUp Agent 
 
   ```
-	shopAgent.updateUser({
-		// Pre-defined user attributes
-		agentId: 'fhj50tgoonoo',
-		firstName: 'chisom',
-		lastName: 'onwuegbuzie',
-		phoneNumber: '+2348066379681',
-		countryCode: 'NG',
-		company: 'Goldtek Ventures',
-		latitude: 3.134555,
-		longitude: 3.058585,
-		address: '259 etim inyang crescent'
-	});
+shopAgent.updateUser({
+	// Pre-defined user attributes
+	agentId: 'fhj50tgoonoo',
+	firstName: 'chisom',
+	lastName: 'onwuegbuzie',
+	phoneNumber: '+2348066379681',
+	countryCode: 'NG',
+	company: 'Goldtek Ventures',
+	latitude: 3.134555,
+	longitude: 3.058585,
+	address: '259 etim inyang crescent'
+});
 ```
 Open Cart
 ```
-	shopAgent.openCart();
+shopAgent.openCart();
 ```
 Open Transaction
 ```
-	shopAgent.openTransaction();
+shopAgent.openTransaction();
 ```

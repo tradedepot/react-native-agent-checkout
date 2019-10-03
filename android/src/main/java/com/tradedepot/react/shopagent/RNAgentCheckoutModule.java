@@ -49,7 +49,7 @@ public class RNAgentCheckoutModule extends ReactContextBaseJavaModule {
         Log.e(TAG, "registerAgent is called with incomplete details");
       }
     } catch (Exception e) {
-      Log.e(TAG, "Intercom not initialized");
+      Log.e(TAG, "shoptopupAgent not initialized");
     }
   }
 
@@ -58,7 +58,7 @@ public class RNAgentCheckoutModule extends ReactContextBaseJavaModule {
     try{
         Checkout.openCart();
     } catch (Exception e) {
-      Log.e(TAG, "Intercom not initialized");
+      Log.e(TAG, "shoptopupAgent not initialized");
     }
    
   }

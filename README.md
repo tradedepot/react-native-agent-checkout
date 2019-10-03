@@ -34,7 +34,13 @@
       implementation project(':react-native-agent-checkout')
   	```
 
-4. Config for Android (intercom-android)
+4. add shoptop agent sdk to app/build.gradle
+   ```
+	implementation('co.tradedepot.shop.sdk:checkout:0.0.1+4@aar') {
+        transitive = true
+    }
+   ```
+5. Config for Android (intercom-android)
    - In `android/app/src/main/java/com/YOUR_APP/app/MainApplication.java`, add the following code in the respective sections of the file using your shopAgent Android API Key and ShopAgent Api Key
    ```
 		// ...other configuration here...

@@ -35,38 +35,25 @@
   	```
 
 4. Config for Android (intercom-android)
-   i. In `android/app/src/main/java/com/YOUR_APP/app/MainApplication.java`, add the following code in the respective sections of the file using your Intercom Android API Key and ShopAgent Api Key
+   - In `android/app/src/main/java/com/YOUR_APP/app/MainApplication.java`, add the following code in the respective sections of the file using your shopAgent Android API Key and ShopAgent Api Key
    ```
-	// ...other configuration here...
-
-	import co.tradedepot.shop.sdk.checkout.Checkout;
-	import io.intercom.android.sdk.Intercom;
-
-	public class MainApplication extends Application {
-
-	@Override
-	public void onCreate() {
-		super.onCreate();
-		 Checkout.initialize(this, "API_KEY");
-
 		// ...other configuration here...
 
-	}
+		import co.tradedepot.shop.sdk.checkout.Checkout;
 
-	public List<ReactPackage> getPackages() {
-		return Arrays.<ReactPackage>asList(
+		public class MainApplication extends Application {
 
-		// ...other configuration here...
+			@Override
+			public void onCreate() {
+				super.onCreate();
+				Checkout.initialize(this, "API_KEY");
 
-		
+				// ...other configuration here...
 
-		// ...other configuration here...
-
-		);
-	}
-	}
-```
-	ii. In `android/build.gradle add   maven { url  "https://dl.bintray.com/tradedepot/agent-checkout-sdk-android" }`
+			}
+		}
+	```
+	- In ` android/build.gradle add   maven { url  "https://dl.bintray.com/tradedepot/agent-checkout-sdk-android" }`
 		```
 			allprojects {
 				repositories {
@@ -77,7 +64,7 @@
 				}
 			}
 		```
-	iii. Open android manifest set the allowbackup to true
+	- Open android manifest set the allowbackup to true
 		```
 			<application
 			// ...other configuration here...

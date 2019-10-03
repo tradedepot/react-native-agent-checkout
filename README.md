@@ -54,23 +54,23 @@
 		}
 	```
 	- In ` android/build.gradle add   maven { url  "https://dl.bintray.com/tradedepot/agent-checkout-sdk-android" }`
-		```
-			allprojects {
-				repositories {
+	```
+		allprojects {
+			repositories {
 
-					//...other configuration here...
+				//...other configuration here...
 
-					maven { url  "https://dl.bintray.com/tradedepot/agent-checkout-sdk-android" }
-				}
+				maven { url  "https://dl.bintray.com/tradedepot/agent-checkout-sdk-android" }
 			}
-		```
-	- Open android manifest set the allowbackup to true
-		```
-			<application
-			// ...other configuration here...
-			android:allowBackup="true" ---> here
-			>
-	  ```
+		}
+	```
+   - Open android manifest set the allowbackup to true
+	```
+		<application
+		// ...other configuration here...
+		android:allowBackup="true" ---> here
+		>
+	```
 
 
 

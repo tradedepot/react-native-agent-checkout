@@ -89,7 +89,7 @@ import shopAgent from 'react-native-agent-checkout';
   Register a shoptopUp Agent 
 
   ```
-shopAgent.updateUser({
+shopAgent.registerAgent({
 	// Pre-defined user attributes
 	agentId: 'fhj50tgoonoo',
 	firstName: 'chisom',

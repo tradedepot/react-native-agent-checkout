@@ -27,11 +27,11 @@ public class RNAgentCheckoutModule extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-    return "RNAgentCheckout";
+    return "RNShopCheckout";
   }
 
   @ReactMethod
-  public void registerAgent(ReadableMap options, Promise promise) {
+  public void register(ReadableMap options, Promise promise) {
     try {
         if(options.hasKey("agentId") && options.hasKey("firstName") && options.hasKey("lastName") && options.hasKey("phoneNumber") && options.hasKey("countryCode") &&
                 options.hasKey("longitude") && options.hasKey("latitude") && options.hasKey("company") & options.hasKey("address")) {

@@ -83,13 +83,13 @@
 ## Usage 
 Import the Module
 ```javascript
-import shopAgent from 'react-native-agent-checkout';
+import shopCheckout from 'react-native-agent-checkout';
 ```
 
-  Register a shoptopUp Agent 
+  Register a shoptopUp Checkout 
 
   ```
-shopAgent.registerAgent({
+shopCheckout.register({
 	// Pre-defined user attributes
 	agentId: 'fhj50tgoonoo',
 	firstName: 'chisom',
@@ -104,9 +104,9 @@ shopAgent.registerAgent({
 ```
 Open Cart
 ```
-shopAgent.openCart();
+shopCheckout.openCart();
 ```
 Open Transaction
 ```
-shopAgent.openTransaction();
+shopCheckout.openTransaction();
 ```

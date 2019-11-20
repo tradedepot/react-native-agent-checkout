@@ -46,8 +46,11 @@ repositories {
         url 'https://dl.google.com/dl/android/maven2'
     }
     google()
-    maven {
+     maven {
         url "https://dl.bintray.com/tradedepot/agent-checkout-sdk-android"
+    }
+    maven {
+        url "http://download.flutter.io"
     }
 }
 
@@ -60,7 +63,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation('co.tradedepot.shop.sdk:checkout:0.0.1+4@aar') {
+    implementation('co.tradedepot.shop.sdk:checkout:1.0.1@aar') {
+        transitive = true
+    }
+    implementation('co.tradedepot.shop.sdk.checkout.flutter_checkout:flutter_release:1.0.1@aar') {
         transitive = true
     }
 }

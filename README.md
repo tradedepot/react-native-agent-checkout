@@ -95,11 +95,15 @@ shopCheckout.register({
 	address: '259 etim inyang crescent'
 });
 ```
-Open Cart
+Open Products
 ```
-shopCheckout.openCart();
+shopCheckout.openProducts();
 ```
 Open Transaction
 ```
 shopCheckout.openTransaction();
+```
+Logout
+```
+shopCheckout.logout();
 ```

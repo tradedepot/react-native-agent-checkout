@@ -55,15 +55,24 @@ public class RNAgentCheckoutModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void openCart () {
+  public void openProducts() {
     try{
-        Checkout.openCart();
+        Checkout.openProducts();
     } catch (Exception e) {
       Log.e(TAG, "shoptopupAgent not initialized");
     }
    
   }
 
+  @ReactMethod
+  public void logout() {
+    try{
+      Checkout.logout();
+    } catch (Exception e) {
+      Log.e(TAG, "shoptopupAgent not initialized");
+    }
+
+  }
 
   @ReactMethod
   public void openTransactions(){
